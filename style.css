@@ -403,6 +403,22 @@
     display: grid;
     align-items: center;
   }
+
+  #don_value {
+    display: none;
+  }
+
+  #don_btn:hover {
+    width: fit-content;
+  }
+
+  #don_btn:hover #hero_don {
+    display: none;
+  }
+
+  #don_btn:hover #don_value {
+    display: block;
+  }
   
   .hero .section-subtitle {
     --color: var(--white);

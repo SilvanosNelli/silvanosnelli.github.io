@@ -83,6 +83,10 @@ function wwd_unhover(){
   }
 }
 
+// Updates the donation stats, just change it here
+var donations_aud = 2000;
+document.getElementById('don_value').innerHTML = "$" + donations_aud + " Raised So Far";
+
 // One last thing, that mfucking scrollbar that keeps on showing itself
 // on mobile devices. I'mma gun it down.
 // Nvm, I completely killed it off

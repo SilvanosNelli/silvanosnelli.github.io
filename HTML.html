@@ -115,7 +115,7 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" onclick="document.getElementById('don_btn').scrollIntoView(false);">
           <span>Donations</span>
 
           <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
@@ -152,8 +152,11 @@
             and educational initiatives.
           </p>
 
-          <button class="btn btn-primary">
-            <span>Donation</span>
+          <!-- Not doing any width transition on this cause
+                       it's a pain in the arse.             -->
+          <button class="btn btn-primary" id="don_btn">
+            <span id="hero_don">Donation</span>
+            <data value="2000" id="don_value">2000 Raised so far</data>
 
             <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
           </button>
