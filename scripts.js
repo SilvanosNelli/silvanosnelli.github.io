@@ -64,12 +64,13 @@ for (var i = 0; i < progressbars.length; i++) {
 function wwd_hover(choice, choice2){
   var x = document.getElementsByClassName('service-card');
   var exp = document.getElementsByClassName('service-card-expanded');
+  var devwidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   for (var i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
   document.getElementById(choice).style.display = "flex";
   document.getElementById(choice).scrollIntoView(false);
-  document.getElementById(choice).style.width = (document.getElementById('serv_list').offsetWidth * 0.85) + "px";
+  document.getElementById(choice).style.width = (document.getElementById('serv_list').offsetWidth - (devwidth * 0.05)) + "px";
   document.getElementById(choice2).style.display = "block";
 }
 
@@ -90,12 +91,3 @@ document.getElementById('don_value').innerHTML = "$" + donations_aud + " Raised 
 // One last thing, that mfucking scrollbar that keeps on showing itself
 // on mobile devices. I'mma gun it down.
 // Nvm, I completely killed it off
-/*
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⣿⣿⡆⠀⠀⢸⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⣾⣿⡆⠀
-⠀⠀⠀⣿⣿⡇⠀⠀⢸⣿⢰⣿⡆⠀⣾⣿⡆⠀⣾⣷ ⣿⣿⡇⠀⠀⣿⣿⡇⠀
-⠀⠀⠀⣿⣿⡇⠀⠀⢸⣿⠘⣿⣿⣤⣿⣿⣿⣤⣿⡇⢻⣿⡇⠀⠀⣿⣿⡇⠀
-⠀⠀⠀⣿⣿⡇⠀⠀⢸⡿⠀⢹⣿⣿⣿⣿⣿⣿⣿⠁⢸⣿⣇⠀⢀⣿⣿⠇⠀
-⠀⠀⠀⠙⢿⣷⣶⣶⡿⠁⠀⠈⣿⣿⠟⠀⣿⣿⠇⠀⠈⠻⣿⣶⣾⡿⠋⠀⠀
-
-*/
