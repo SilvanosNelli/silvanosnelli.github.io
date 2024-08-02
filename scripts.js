@@ -166,6 +166,27 @@ $(function() {
 });
 
 
+$(function() {
+   $.getJSON('testimonials.json', function(data) {
+      var pfp = document.getElementById('testi-pfp');
+      var testimonial = document.getElementsByClassName('testi-text');
+      var name = document.getElementsByClassName('testi-name');
+      var title = document.getElementsByClassName('testi-title');
+      var banner = document.getElementById('testi-bannerid');
+      var count = 0;
+      $.each(data.testimony, function(i, f) {
+          setTimeout(function(){
+          $('.testi-card').fadeToggle(200);
+          pfp.src = f.pfp;
+          testimonial[0].textContent = f.testimonial;
+          name[0].textContent = f.name;
+          title[0].textContent = f.title;
+          banner.src = f.banner;
+          $('.testi-card').fadeToggle(200);} , count * 5000);
+          count++;
+      });
+     });
+   });
 
 // One last thing, that mfucking scrollbar that keeps on showing itself
 // on mobile devices. I'mma gun it down.
