@@ -1,0 +1,32 @@
+{
+   "item": [
+       {
+           "image_link": "https://i.pinimg.com/564x/28/9f/55/289f55c69b3bbedc475945b57b34c077.jpg",
+           "itemname": "Terracota Vases",
+           "raised_so_far": 1650,
+           "goal": 30000,
+           "itemcost": 16.50
+       },
+       {
+           "image_link": "https://i.pinimg.com/564x/0e/53/61/0e53611af724be044015a5dd7469e864.jpg",
+           "itemname": "Decorative Pottery",
+           "raised_so_far": 2782,
+           "goal": 40000,
+           "itemcost": 18.99
+       },
+       {
+           "image_link": "https://i.pinimg.com/564x/19/22/d9/1922d99b3b53222e7d449c0e82340266.jpg",
+           "itemname": "Cooking Pots",
+           "raised_so_far": 1872,
+           "goal": 20000,
+           "itemcost": 18.95
+       },
+       {
+           "image_link": "https://i.pinimg.com/564x/87/0e/b5/870eb5e639d4af39faf980c7e5953c30.jpg",
+           "itemname": "Clay Sculptures",
+           "raised_so_far": 3900,
+           "goal": 10000,
+           "itemcost": 6100
+       }
+   ]
+}

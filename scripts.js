@@ -88,6 +88,85 @@ function wwd_unhover(){
 var donations_aud = 2000;
 document.getElementById('don_value').innerHTML = "$" + donations_aud + " Raised So Far";
 
+
+// Something I realised during the development of scripts
+// I should also be able to change the items info from some file
+// Cause else, I'll go mad changing the values (Ignore the fact that I'm not stable)
+// Also, gonna be using jQuery cause that makes *life easier*
+$(function() {
+   $.getJSON('shopfile.json', function(data) {
+       $.each(data.item, function(i, f) {
+          var codeinsertion = `<li>
+              <div class="donate-card">
+
+                <figure class="card-banner">
+                  <img src="${f.image_link}" width="520" height="325" loading="lazy" alt="Elephant"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="progress-wrapper">
+                    <p class="progress-text">
+                      <span>Raised</span>
+
+                      <data class="raised_amt">\$${(f.raised_so_far).toLocaleString()}</data>
+                    </p>
+
+                    <data class="progress-value" value="${((f.raised_so_far/f.goal)*100)}">${((f.raised_so_far/f.goal)*100).toFixed(2)}%</data>
+                  </div>
+
+                  <div class="progress-box">
+                    <div class="progress"></div>
+                  </div>
+
+                  <h3 class="h3 card-title">${f.itemname}</h3>
+
+                  <div class="card-wrapper">
+
+                    <p class="card-wrapper-text">
+                      <span>Goal</span>
+
+                      <data class="green">\$${(f.goal).toLocaleString()}</data>
+                    </p>
+
+                    <p class="card-wrapper-text">
+                      <span>Raised</span>
+
+                      <data class="yellow">\$${(f.raised_so_far).toLocaleString()}</data>
+                    </p>
+
+                    <p class="card-wrapper-text">
+                      <span>To Go</span>
+
+                      <data class="cyan">\$${(f.goal-f.raised_so_far).toLocaleString()}</data>
+                    </p>
+
+                  </div>
+
+                  <button class="btn btn-secondary">
+                    <span>\$${(f.itemcost).toLocaleString()}</span>
+
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+
+              </div>
+            </li>`;
+          $(codeinsertion).appendTo(".donate-list");
+     });
+
+   var progressbars =  document.getElementsByClassName('progress');
+   var progress_goals = document.getElementsByClassName('progress-value');
+   for (var i = 0; i < progressbars.length; i++) {
+     progressbars[i].style.width=progress_goals[i].value+"%";
+   }
+   });
+});
+
+
+
 // One last thing, that mfucking scrollbar that keeps on showing itself
 // on mobile devices. I'mma gun it down.
 // Nvm, I completely killed it off
