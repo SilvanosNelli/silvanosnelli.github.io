@@ -68,7 +68,7 @@
           </li>
 
           <li>
-            <a href="#donate" class="navbar-link" data-nav-link>
+            <a href="#shop" class="navbar-link" data-nav-link>
               <span>Shop</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
@@ -84,7 +84,7 @@
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>
+            <a href="mailto:handinhand@example.com" class="navbar-link" data-nav-link>
               <span>Contact</span>
 
               <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
@@ -96,10 +96,6 @@
       </nav>
 
       <div class="header-action">
-
-        <button class="search-btn" aria-label="Search">
-          <ion-icon name="search-outline"></ion-icon>
-        </button>
 
         <button class="btn btn-primary" onclick="document.getElementById('don_btn').scrollIntoView(false);">
           <span>Donations</span>
@@ -138,7 +134,7 @@
 
           <!-- Not doing any width transition on this cause
                        it's a pain in the arse.             -->
-          <button class="btn btn-primary" id="don_btn">
+          <button class="btn btn-primary" id="don_btn" onclick="window.open('https://www.paypal.com/in/home');">
             <span id="hero_don">Donation</span>
             <data value="2000" id="don_value">2000 Raised so far</data>
             <!-- I suggest you fix this thing here to show variable donos -->
@@ -156,7 +152,7 @@
 
             <li class="features-item">
               <div class="item-icon">
-                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                <i class="bi bi-house-door"></i>
               </div>
 
               <div>
@@ -170,7 +166,7 @@
 
             <li class="features-item">
               <div class="item-icon">
-                <ion-icon name="water-outline"></ion-icon>
+                <i class="bi bi-graph-up-arrow"></i>
               </div>
 
               <div>
@@ -184,7 +180,7 @@
 
             <li class="features-item">
               <div class="item-icon">
-                <ion-icon name="leaf-outline"></ion-icon>
+                <i class="bi bi-hand-thumbs-up"></i>
               </div>
 
               <div>
@@ -198,7 +194,7 @@
 
             <li class="features-item">
               <div class="item-icon">
-                <ion-icon name="snow-outline"></ion-icon>
+                <i class="bi bi-globe"></i>
               </div>
 
               <div>
@@ -458,7 +454,7 @@
           <div class="cta-content">
             <h2 class="h2 section-title">29+ Trusted Global Partners</h2>
 
-            <button class="btn btn-outline">
+            <button class="btn btn-outline" onclick="window.open('mailto:no-one@example.com?subject=[PARTNERSHIP]');">
               <span>Become a Partner</span>
 
               <i class="bi bi-heart"></i>
@@ -500,7 +496,7 @@
                 <!-- Had to do the above hover thing cause the hover action breaks on some devices, especially some mobile devices -->
                 <div style="max-width: 360px;">
                   <div class="card-icon">
-                    <ion-icon name="leaf-outline"></ion-icon>
+                    <i class="bi bi-people"></i>
                   </div>
                   <h3 class="h3 card-title">Empower Artisan Communities</h3>
                   <p class="card-text">
@@ -518,7 +514,7 @@
               <div class="service-card" id="sc2" onclick="wwd_hover('sc2','sc2_ext')" onmouseleave="wwd_unhover()">
                 <div style="max-width: 360px;">
                   <div class="card-icon">
-                    <ion-icon name="earth-outline"></ion-icon>
+                    <i class="bi bi-mortarboard"></i>
                    </div>
                   <h3 class="h3 card-title">Support Education</h3>
                   <p class="card-text">
@@ -536,7 +532,7 @@
               <div class="service-card" id="sc3" onclick="wwd_hover('sc3','sc3_ext')" onmouseleave="wwd_unhover()">
                 <div style="max-width: 360px;">
                   <div class="card-icon">
-                    <ion-icon name="flower-outline"></ion-icon>
+                    <i class="bi bi-activity"></i>
                   </div>
                   <h3 class="h3 card-title">Ensure Basic Needs</h3>
                   <p class="card-text">
@@ -554,7 +550,7 @@
               <div class="service-card" id="sc4" onclick="wwd_hover('sc4','sc4_ext')" onmouseleave="wwd_unhover()">
                 <div style="max-width: 360px;">
                   <div class="card-icon">
-                    <ion-icon name="boat-outline"></ion-icon>
+                    <i class="bi bi-brush"></i>
                   </div>
                   <h3 class="h3 card-title">Promote Cultural Heritage</h3>
                   <p class="card-text">
@@ -581,7 +577,7 @@
         - #DONATE and this autofills
       -->
 
-      <section class="section donate" id="donate">
+      <section class="section donate" id="shop">
         <div class="container">
           <ul class="donate-list">
           </ul>
@@ -601,8 +597,7 @@
         <div class="testi-content">
 
           <p class="section-subtitle">
-            <img src="https://codewithsadee.github.io/wildvine/assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-
+            <i class="bi bi-chat-dots"></i>
             <span>Our Testimonials</span>
           </p>
 
@@ -612,17 +607,21 @@
 
           <div class="testi-card">
 
-            <figure class="card-avatar">
-              <img src="" id="testi-pfp" width="60" height="60" loading="lazy">
-            </figure>
+
 
             <div>
               <blockquote class="testi-text">
               </blockquote>
+              <div style="display:flex; gap: 2em;">
+                <figure class="card-avatar">
+                  <img src="" id="testi-pfp" width="60" height="60" loading="lazy" style="object-fit: cover;">
+                </figure>
+                <div>
+                  <h3 class="testi-name"></h3>
+                  <p class="testi-title"></p>
+                </div>
+              </div>
 
-              <h3 class="testi-name"></h3>
-
-              <p class="testi-title"></p>
             </div>
 
           </div>
@@ -643,125 +642,14 @@
         <div class="container">
 
           <p class="section-subtitle">
-            <img src="https://codewithsadee.github.io/wildvine/assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
-
             <span>Event & Program</span>
-
-            <img src="https://codewithsadee.github.io/wildvine/assets/images/subtitle-img-green.png" width="32" height="7" alt="Wavy line">
           </p>
 
           <h2 class="h2 section-title">
             Our Most Popular Causes For <strong>Building Fund</strong>
           </h2>
 
-          <ul class="event-list">
-
-            <li>
-              <div class="event-card">
-
-                <time class="card-time" datetime="01-05">
-                  <span class="month">Jan</span>
-
-                  <span class="date">05</span>
-                </time>
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Available Worldwide</p>
-
-                    <h3 class="card-title">Pottery Workshop</h3>
-
-                    <p class="card-text">
-                      Craft and create your own pottery pieces while supporting local craftmanship.
-                    </p>
-                  </div>
-
-                  <button class="btn btn-white">
-                    <span>Learn More</span>
-
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card">
-
-                <time class="card-time" datetime="02-23">
-                  <span class="month">Feb</span>
-
-                  <span class="date">23</span>
-                </time>
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Online</p>
-
-                    <h3 class="card-title">Online Auction</h3>
-
-                    <p class="card-text">
-                      Participate in online auctions featuring limited pottery
-                      items crafted by the hands of the Dharavi community.
-                    </p>
-                  </div>
-
-                  <button class="btn btn-white">
-                    <span>Learn More</span>
-
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card">
-
-                <time class="card-time" datetime="03-27">
-                  <span class="month">Mar</span>
-
-                  <span class="date">27</span>
-                </time>
-
-                <div class="wrapper">
-
-                  <div class="card-content">
-                    <p class="card-subtitle">Available Worldwide</p>
-
-                    <h3 class="card-title">Pottery Sales</h3>
-
-                    <p class="card-text">
-                      Purchase pottery from our sales and exhibition showcasing the work of 
-                      Dharavi artisans.
-                    </p>
-                  </div>
-
-                  <button class="btn btn-white">
-                    <span>Learn More</span>
-
-                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </button>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <button class="btn btn-secondary">
-            <span>Learn More Us</span>
-
-            <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
-          </button>
-
+          <ul class="event-list"></ul>
         </div>
       </section>
 
@@ -778,7 +666,7 @@
         <ul class="insta-post-list">
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/p/CO0l02xlrsD/?hl=en" class="insta-post-link">
               <img src="https://121clicks.com/wp-content/uploads/2019/01/kumbharwada_dharavi_photos_rahul_machigar_10.jpg" width="320" height="300" loading="lazy" alt="Lion"
                 class="img-cover">
 
@@ -787,7 +675,7 @@
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/p/CO0l02xlrsD/?hl=en" class="insta-post-link">
               <img src="https://121clicks.com/wp-content/uploads/2019/01/kumbharwada_dharavi_photos_rahul_machigar_11.jpg" width="320" height="300" loading="lazy" alt="Deer"
                 class="img-cover">
 
@@ -796,7 +684,7 @@
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/p/CO0l02xlrsD/?hl=en" class="insta-post-link">
               <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e56f89119824155.60a56a7616dec.jpg" width="320" height="300" loading="lazy" alt="Wild Bear"
                 class="img-cover">
 
@@ -805,7 +693,7 @@
           </li>
 
           <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
+            <a href="https://www.instagram.com/p/CO0l02xlrsD/?hl=en" class="insta-post-link">
               <img src="https://121clicks.com/wp-content/uploads/2019/01/kumbharwada_dharavi_photos_rahul_machigar_14.jpg" width="320" height="300" loading="lazy" alt="Deer"
                 class="img-cover">
 

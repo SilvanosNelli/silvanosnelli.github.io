@@ -188,6 +188,47 @@ $(function() {
      });
    });
 
-// One last thing, that mfucking scrollbar that keeps on showing itself
-// on mobile devices. I'mma gun it down.
-// Nvm, I completely killed it off
+$(function() {
+  if(screen.availHeight > screen.availWidth){
+    $(".testi-banner").toggle();
+}
+   });
+
+$(function() {
+   $.getJSON('events.json', function(data) {
+       $.each(data.eventlist, function(i, f) {
+        var date = new Date(2024,(f.month-1), f.day);
+          var codeinsertion = `<li>
+              <div class="event-card">
+
+                <time class="card-time" datetime="${date.toLocaleString('default', {month:"2-digit"})}-${date.toLocaleString('default', {day:"2-digit"})}}">
+                  <span class="month">${date.toLocaleString('default', {month:"short"})}</span>
+                  <span class="date">${date.toLocaleString('default', {day:"2-digit"})}</span>
+                </time>
+
+                <div class="wrapper">
+
+                  <div class="card-content">
+                    <p class="card-subtitle">${f.mode}</p>
+
+                    <h3 class="card-title">${f.title}</h3>
+
+                    <p class="card-text">
+                      ${f.description}
+                    </p>
+                  </div>
+
+                  <button class="btn btn-white">
+                    <span>Learn More</span>
+
+                    <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                  </button>
+
+                </div>
+
+              </div>
+            </li>`;
+          $(codeinsertion).appendTo(".event-list");
+     });
+   });
+});

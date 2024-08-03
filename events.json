@@ -1,0 +1,25 @@
+{
+   "eventlist": [
+       {
+           "title": "Pottery Workshop",
+           "description": "Craft and create your own pottery pieces while supporting local craftmanship.",
+           "mode": "Available Worldwide",
+           "day": 5,
+           "month": 1
+       },
+       {
+           "title": "Online Auction",
+           "description": "Participate in online auctions featuring limited pottery items crafted by the hands of the Dharavi community.",
+           "mode": "Online",
+           "day": 23,
+           "month": 2
+       },
+       {
+           "title": "Pottery Sales",
+           "description": "Purchase pottery from our sales and exhibition showcasing the work of Dharavi artisans.",
+           "mode": "Available Worldwide",
+           "day": 27,
+           "month": 3
+       }
+   ]
+}

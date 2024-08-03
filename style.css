@@ -754,7 +754,7 @@
     margin-block: 10px 40px;
   }
   
-  .testi-card { color: var(--white); }
+  .testi-card { color: var(--white); gap: 1em; }
   
   .testi-text,
   .testi-name { font-size: var(--fs-8); }
